@@ -1,0 +1,27 @@
+# サイト全体の設定ファイル
+
+# サイト名
+site_name: cirroFX
+
+theme:
+  name: material            # Material for MkDocs のテーマを使う
+  language: ja              # 検索やボタンの表示を日本語にする
+  custom_dir: overrides     # トップページ用の自作テンプレートを置くフォルダ
+  features:
+    - navigation.tabs       # 上部にタブ形式のメニューを出す
+    - navigation.sections   # 左メニューをセクションごとにまとめる
+    - search.suggest        # 検索中に候補を表示する
+    - content.code.copy     # コードブロックにコピーボタンをつける
+  palette:
+    - scheme: default       # ライトモード
+      toggle:
+        icon: material/weather-night   # 切り替えボタンのアイコン（月）
+        name: Dark mode
+    - scheme: slate         # ダークモード
+      toggle:
+        icon: material/weather-sunny   # 切り替えボタンのアイコン（太陽）
+        name: Light mode
+
+# 追加で読み込む自作CSS
+extra_css:
+  - stylesheets/home.css

@@ -1,0 +1,43 @@
+/* トップページの大きな表示エリア */
+.cirro-hero {
+  min-height: 90vh;          /* 画面の高さの90%を使う */
+  display: flex;
+  align-items: center;       /* 中身を縦方向の真ん中に置く */
+  padding: 0 8vw;            /* 左右の余白（画面幅に合わせて変わる） */
+  color: #fff;
+  /* 背景：右上の光 ＋ 紫から青へのグラデーション */
+  background:
+    radial-gradient(circle at 80% 30%, rgba(170, 150, 255, .5), transparent 55%),
+    linear-gradient(160deg, #1b1a4a 0%, #4b4bb5 55%, #a9b8ff 100%);
+}
+
+/* cirroFX のタイトル */
+.cirro-hero h1 {
+  font-size: clamp(3rem, 8vw, 6rem);  /* 画面幅に合わせて大きさが変わる（最小3rem、最大6rem） */
+  font-weight: 300;                   /* 細めの文字 */
+  letter-spacing: .05em;              /* 文字の間隔を少し広げる */
+  margin: 0 0 .5rem;
+  color: #fff;
+}
+
+/* 説明文 */
+.cirro-hero p { font-size: 1.2rem; line-height: 1.7; margin: 0 0 2rem; }
+
+/* ボタンを横に並べる（狭い画面では折り返す） */
+.cirro-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* ボタンの見た目 */
+.cirro-btn {
+  padding: .7rem 1.6rem;
+  border: 1px solid rgba(255, 255, 255, .7);   /* 半透明の白い枠 */
+  border-radius: 999px;                        /* 丸いカプセル型 */
+  color: #fff;
+  backdrop-filter: blur(6px);                  /* 背面をすりガラスのようにぼかす */
+  transition: background .2s;                  /* ホバーの変化をなめらかに */
+}
+
+/* リンクのボタンだけ、マウスを乗せたら明るくする */
+a.cirro-btn:hover { background: rgba(255, 255, 255, .2); }
+
+/* 「工事中」ボタン：薄くして、クリックできない見た目にする */
+.cirro-btn--disabled { opacity: .6; cursor: default; }

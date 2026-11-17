@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block tabs %}
+  {{ super() }}
+  <section class="cirro-hero">
+    <div class="cirro-hero__inner">
+      <h1>cirroFX</h1>
+      <p>Shaders for visual effects<br>and particles</p>
+      <div class="cirro-buttons">
+        <span class="cirro-btn cirro-btn--disabled">Shop · Coming Soon</span>
+        <a class="cirro-btn" href="{{ 'particle/' | url }}">Documentation →</a>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}
